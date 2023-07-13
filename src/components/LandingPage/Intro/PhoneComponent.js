@@ -4,7 +4,7 @@ import gradient from "../../../assets/gradient.png";
 import iphone from "../../../assets/iphone.png";
 import { motion } from "framer-motion";
 
-function PhoneComponent() {
+const PhoneComponent = () => {
   return (
     <div className="phone-box">
       <img className="gradient" src={gradient} />
@@ -22,6 +22,6 @@ function PhoneComponent() {
       />
     </div>
   );
-}
+};
 
 export default PhoneComponent;

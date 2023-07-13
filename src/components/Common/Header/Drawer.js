@@ -4,7 +4,7 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import "./styles.css";
 import { Switch } from "@mui/material";
 
-export default function MobileDrawer() {
+const MobileDrawer = () =>  {
   const [open, setOpen] = useState(false);
   const setDark = () => {
     localStorage.setItem("theme", "dark");
@@ -48,6 +48,7 @@ export default function MobileDrawer() {
       />
       <Drawer anchor={"right"} open={open} onClose={() => setOpen(false)}>
         <div className="drawer">
+          <div style={{textAlign:"end", cursor:"pointer", fontSize:"20px"}} onClick={()=> setOpen(false)}>{open ? "X" : ""}</div>
           <a href="/">
             <p className="link">Home</p>
           </a>
@@ -71,3 +72,4 @@ export default function MobileDrawer() {
     </div>
   );
 }
+export default MobileDrawer;

@@ -1,7 +1,7 @@
 import React from "react";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
-function TopButton() {
+const TopButton = () => {
   var mybutton = document.getElementById("myBtn");
 
   function topFunction() {
@@ -28,6 +28,6 @@ function TopButton() {
       <ArrowUpwardIcon sx={{ color: "var(--blue)" }} />
     </div>
   );
-}
+};
 
 export default TopButton;

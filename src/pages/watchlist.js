@@ -23,7 +23,7 @@ function WatchListPage() {
 
   const getData = async () => {
     const response = await get100Coins();
-    var myCoins = response.filter((coins) => watchlist.includes(coins.id));
+    let myCoins = response.filter((coins) => watchlist.includes(coins.id));
     setCoins(myCoins);
   };
 

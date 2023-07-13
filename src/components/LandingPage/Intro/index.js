@@ -4,7 +4,7 @@ import "./styles.css";
 import { motion } from "framer-motion";
 import PhoneComponent from "./PhoneComponent";
 import { RWebShare } from "react-web-share";
-function LandingIntro() {
+const LandingIntro = () => {
   return (
     <div className={"wrapper"}>
       <div className={"info"}>
@@ -58,6 +58,6 @@ function LandingIntro() {
       <PhoneComponent />
     </div>
   );
-}
+};
 
 export default LandingIntro;

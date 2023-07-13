@@ -2,7 +2,7 @@ import { Pagination } from "@mui/material";
 import React from "react";
 import "./styles.css";
 
-function PaginationComponent({ pageNumber, handleChange }) {
+const PaginationComponent = ({ pageNumber, handleChange }) =>  {
   return (
     <div className="pagination-div">
       <Pagination

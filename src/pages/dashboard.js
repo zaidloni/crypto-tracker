@@ -9,15 +9,16 @@ import { get100Coins } from "../functions/get100Coins";
 import TopButton from "../components/Common/TopButton/topButton";
 import Button from "../components/Common/Button/Button";
 
-function DashboardPage() {
+const DashboardPage = () =>  {  
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
   const [pageNumber, setPageNumber] = useState(1);
   const [pageCoins, setPageCoins] = useState([]);
 
-  var filteredCoins = data.filter((item) => {
+  let filteredCoins = data.filter((item) => {
     if (
+      
       item.symbol.toLowerCase().includes(search.toLowerCase()) ||
       item.name.toLowerCase().includes(search.toLowerCase())
     ) {

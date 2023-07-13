@@ -8,7 +8,7 @@ import BookmarkRoundedIcon from "@mui/icons-material/BookmarkRounded";
 import IconButton from "@mui/material/IconButton";
 import { addToWatchlist, removeFromWatchlist } from "../../../functions";
 
-function Grid({ coin, delay }) {
+const Grid = ({ coin, delay }) =>  {
   const isWatchlist = localStorage.getItem("watchlist")
     ? localStorage.getItem("watchlist").includes(coin.id)
     : false;

@@ -8,7 +8,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import SendIcon from "@mui/icons-material/Send";
 import { RWebShare } from "react-web-share";
 
-function Footer() {
+const Footer = () => {
   return (
     <div className="footer">
       <a href="/">
@@ -38,6 +38,6 @@ function Footer() {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

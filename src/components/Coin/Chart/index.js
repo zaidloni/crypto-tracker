@@ -4,7 +4,7 @@ import { Line } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
 import { convertNumbers } from "../../../functions/convertNumber";
 
-function LineChart({ chartData, mutliAxis, priceType }) {
+const LineChart = ({ chartData, mutliAxis, priceType }) => {
   const options = {
     plugins: {
       legend: {
@@ -66,6 +66,6 @@ function LineChart({ chartData, mutliAxis, priceType }) {
   };
 
   return <Line data={chartData} options={options} />;
-}
+};
 
 export default LineChart;

@@ -2,7 +2,7 @@ import { MenuItem, Select } from "@mui/material";
 import React from "react";
 import "./styles.css";
 
-function SelectDays({ noText, days, handleChange }) {
+const SelectDays = ({ noText, days, handleChange }) =>  {
   return (
     <div className="select-div">
       {!noText ? <p>Price Change in the last</p> : <></>}

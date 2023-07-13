@@ -7,10 +7,10 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import Grid from "../GridComponent/Grid";
 import "./styles.css";
 import List from "../ListComponent/List";
-export default function Tabs({ data }) {
+const Tabs = ({ data }) => {
   const [tabValue, setTabValue] = useState("grid");
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (event,  newValue) => {
     setTabValue(newValue);
   };
 
@@ -69,4 +69,5 @@ export default function Tabs({ data }) {
       </ThemeProvider>
     </div>
   );
-}
+};
+export default Tabs;

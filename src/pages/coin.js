@@ -13,7 +13,7 @@ import { getCoinPrices } from "../functions/getCoinPrices";
 import { setChartDataFunction } from "../functions/setChartData";
 import { setCoinDataFunction } from "../functions/setCoinData";
 
-function CoinPage() {
+const CoinPage = () => {
   const { id } = useParams();
 
   const [coin, setCoin] = useState({});
@@ -88,6 +88,6 @@ function CoinPage() {
       <Footer />
     </div>
   );
-}
+};
 
 export default CoinPage;

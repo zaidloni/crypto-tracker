@@ -2,7 +2,7 @@ import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import "./styles.css";
 
-function Search({ search, setSearch }) {
+const Search = ({ search, setSearch }) =>  {
   return (
     <div className="search-box">
       <SearchIcon sx={{ color: "var(--grey) !important" }} />

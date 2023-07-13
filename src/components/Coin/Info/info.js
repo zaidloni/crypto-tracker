@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./styles.css";
 function Info({ name, desc }) {
   const [truncate, setTruncate] = useState(true);
-  var truncatedDesc =
+  let truncatedDesc =
     desc.slice(0, 500) +
     "<p style='color:var(--grey); cursor:pointer'> Read More...</p>";
 
-  var fullDesc =
+  let fullDesc =
     desc + "<p style='color:var(--grey); cursor:pointer'> Read Less...</p>";
 
   return (
