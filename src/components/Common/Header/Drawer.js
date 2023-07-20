@@ -3,8 +3,9 @@ import Drawer from "@mui/material/Drawer";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import "./styles.css";
 import { Switch } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const MobileDrawer = () =>  {
+const MobileDrawer = () => {
   const [open, setOpen] = useState(false);
   const setDark = () => {
     localStorage.setItem("theme", "dark");
@@ -48,19 +49,27 @@ const MobileDrawer = () =>  {
       />
       <Drawer anchor={"right"} open={open} onClose={() => setOpen(false)}>
         <div className="drawer">
-          <div style={{textAlign:"end", cursor:"pointer", fontSize:"20px"}} onClick={()=> setOpen(false)}>{open ? "X" : ""}</div>
-          <a href="/">
+          <div
+            style={{ textAlign: "end", cursor: "pointer", fontSize: "20px" }}
+            onClick={() => setOpen(false)}
+          >
+            {open ? "X" : ""}
+          </div>
+          <Link to="/">
             <p className="link">Home</p>
-          </a>
-          <a href="/compare">
+          </Link>
+
+          <Link to="/compare">
             <p className="link">Compare</p>
-          </a>
-          <a href="/watchlist">
+          </Link>
+
+          <Link to="/watchlist">
             <p className="link">Watchlist</p>
-          </a>
-          <a href="/dashboard">
+          </Link>
+          <Link to="/dashboard">
             <p className="link">Dashboard</p>
-          </a>
+          </Link>
+
           <Switch
             checked={!mode}
             onClick={(e) => {
@@ -71,5 +80,5 @@ const MobileDrawer = () =>  {
       </Drawer>
     </div>
   );
-}
+};
 export default MobileDrawer;

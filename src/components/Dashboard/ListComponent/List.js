@@ -9,6 +9,7 @@ import { convertNumbers } from "../../../functions/convertNumber";
 import BookmarkRoundedIcon from "@mui/icons-material/BookmarkRounded";
 import IconButton from "@mui/material/IconButton";
 import { addToWatchlist, removeFromWatchlist } from "../../../functions";
+import { Link } from "react-router-dom";
 
 function List({ coin, delay }) {
   const isWatchlist = localStorage.getItem("watchlist")
@@ -28,14 +29,14 @@ function List({ coin, delay }) {
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.3, delay: delay }}
     >
-      <a href={`/coin/${coin.id}`}>
+      <Link to={`/coin/${coin.id}`}>
         <td className="td-img">
           <Tooltip title="Logo">
             <img src={coin.image} className="coin-logo" />
           </Tooltip>
         </td>
-      </a>
-      <a href={`/coin/${coin.id}`}>
+      </Link>
+      <Link to={`/coin/${coin.id}`}>
         <td className="td-name-flex">
           <div className="name-flex ">
             <Tooltip title="Symbol">
@@ -46,8 +47,8 @@ function List({ coin, delay }) {
             </Tooltip>
           </div>
         </td>
-      </a>
-      <a href={`/coin/${coin.id}`}>
+      </Link>
+      <Link to={`/coin/${coin.id}`}>
         <td className="td-chip-flex">
           {coin.price_change_percentage_24h > 0 ? (
             <Tooltip title="Percentage Change in 24 Hours">
@@ -69,8 +70,8 @@ function List({ coin, delay }) {
             </Tooltip>
           )}
         </td>
-      </a>
-      <a href={`/coin/${coin.id}`}>
+      </Link>
+      <Link to={`/coin/${coin.id}`}>
         <td>
           <Tooltip title="Price">
             <p
@@ -86,28 +87,28 @@ function List({ coin, delay }) {
             </p>
           </Tooltip>
         </td>
-      </a>
-      <a href={`/coin/${coin.id}`}>
+      </Link>
+      <Link to={`/coin/${coin.id}`}>
         <td className="td-mkt-cap">
           <Tooltip title="Total Volume">
             <p>${coin.total_volume.toLocaleString()}</p>
           </Tooltip>
         </td>
-      </a>
-      <a href={`/coin/${coin.id}`}>
+      </Link>
+      <Link to={`/coin/${coin.id}`}>
         <td className="td-mkt-cap">
           <Tooltip title="Market Capital">
             <p>${coin.market_cap.toLocaleString()}</p>
           </Tooltip>
         </td>
-      </a>
-      <a href={`/coin/${coin.id}`}>
+      </Link>
+      <Link to={`/coin/${coin.id}`}>
         <td className="td-vol-cap">
           <Tooltip title="Volume">
             <p>${volume}</p>
           </Tooltip>
         </td>
-      </a>
+      </Link>
       <td>
         {isWatchlist || isAdded ? (
           <div

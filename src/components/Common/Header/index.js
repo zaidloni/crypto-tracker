@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Button from "../Button/Button";
 import MobileDrawer from "./Drawer";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const setDark = () => {
@@ -46,24 +47,26 @@ const Header = () => {
   return (
     <div className="navbar">
       <h1 className="heading">
-        <a href="/">
+        <Link to="/">
           CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
-        </a>
+        </Link>
       </h1>
       <div className="links">
         <Switch checked={!mode} onClick={toggleTheme} />
-        <a href="/">
+        <Link to="/">
           <p className="link">Home</p>
-        </a>
-        <a href="/compare">
+        </Link>
+
+        <Link to="/compare">
           <p className="link">Compare</p>
-        </a>
-        <a href="/watchlist">
+        </Link>
+
+        <Link to="/watchlist">
           <p className="link">Watchlist</p>
-        </a>
-        <a href="/dashboard">
+        </Link>
+        <Link to="/dashboard">
           <Button text="dashboard" />
-        </a>
+        </Link>
       </div>
       <MobileDrawer />
     </div>

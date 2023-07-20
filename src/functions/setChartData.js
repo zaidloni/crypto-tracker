@@ -2,6 +2,7 @@ import { getDate } from "./getDate";
 
 export const setChartDataFunction = (setState, prices1, prices2) => {
   // let bgCol = prices2 ? "transparent" : "rgba(58,128,33,0.1";
+  console.log(prices1);
   setState({
     labels: prices1?.map((data) => getDate(data[0])),
     datasets: [
